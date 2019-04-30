@@ -24,12 +24,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
 	<!-- Font awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+	<!-- Favicon -->
+	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
 	<!-- Meta tags -->
 	<meta name="author" content="{{ $config.author }}">
 	<meta name="theme-color" content="#000000">
+	<meta name="description" content="{{ $config.description }}">  
 
 	{{ if .RSSLink }}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
