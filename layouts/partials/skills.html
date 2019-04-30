@@ -2,7 +2,7 @@
 
 <section id="skills" class="aqua text-light">
   <h2 class="heading">{{ $skills.title }}</h2>
-
+  
   {{ range $key, $value := $skills.skills }}
 
   <div class="skill">
@@ -13,7 +13,6 @@
   </div>
   {{ end }}
 
-  <div class="cv">
-    <span class="h7"><a href="Christian's Resume.pdf">{{ $skills.cv }}</a></span>
-  </div>
+  <p><small><a href="Christian's Resume.pdf"> {{ $skills.cv }} <i class="fa fa-download" aria-hidden="true"></i></a></small></p>
+
 </section>
