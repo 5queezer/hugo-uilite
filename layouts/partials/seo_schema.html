@@ -1,14 +1,14 @@
 <!-- Schema.org for Google -->
 <meta itemprop="name" content="{{ .Title }}">
-<meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta itemprop="description" content="{{ .Description }}">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta name="og:title" content="{{ .Title }}">
-<meta name="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta name="og:description" content="{{ .Description }}">
 <meta name="og:type" content="article">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta name="twitter:description" content="{{ .Description }}">
 <!-- Open Graph - Article -->
 <meta name="article:author" content="{{ .Site.Data.config.author }}">
 
@@ -39,7 +39,7 @@
     "articleSection" : "{{ .Section }}",
     "name" : "{{ .Title }}",
     "headline" : "{{ .Title }}",
-    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+    "description" : "{{ .Description }}",
     "inLanguage" : "{{ .Site.LanguageCode }}",
     "author" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
     "creator" : "{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
