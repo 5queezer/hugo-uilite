@@ -18,4 +18,10 @@
   </div>
   {{ end }}
 
+  <div class="tags">
+    {{ range $tag, $description := $skills.tags }}
+      <h1 class="badge badge-primary" data-toggle="tooltip" data-placement="bottom" title="{{ $description }}">{{ $tag }}</h1>
+    {{ end }}
+  </div>
+
 </section>
