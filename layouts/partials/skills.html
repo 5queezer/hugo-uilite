@@ -2,10 +2,10 @@
 
 <section id="skills" class="aqua text-light">
   <h2 class="heading" style="display: flex; align-items: center; justify-content: space-between;">
-    {{ $skills.title }} <a class="btn btn-light" href="https://novoresume.com/a/chri.2"> {{ $skills.cv }} <i class="fa fa-download" aria-hidden="true"></i></a>
+    {{ $skills.title }}
   </h2>
   <p>
-    
+
   </p>
 
   {{ range $key, $value := $skills.skills }}
@@ -13,14 +13,16 @@
   <div class="skill">
     <span class="h6">{{ $key }}</span>
     <div class="progress">
-      <div class="progress-bar bg-blue" role="progressbar" style="width: {{ $value }}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-blue" role="progressbar" style="width: {{ $value }}%" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
   {{ end }}
 
   <div class="tags">
     {{ range $tag, $description := $skills.tags }}
-      <h2 class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="bottom" title="{{ $description }}">{{ $tag }}</h2>
+    <h2 class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="bottom" title="{{ $description }}">
+      {{ $tag }}</h2>
     {{ end }}
   </div>
 
